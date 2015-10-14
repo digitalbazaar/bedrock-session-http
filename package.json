@@ -1,0 +1,27 @@
+{
+  "name": "bedrock-session-rest",
+  "version": "0.0.1-dev",
+  "description": "A RESTful API for accessing session information",
+  "main": "./lib/session.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/digitalbazaar/bedrock-session-rest.git"
+  },
+  "author": {
+    "name": "Digital Bazaar, Inc.",
+    "email": "support@digitalbazaar.com",
+    "url": "http://digitalbazaar.com"
+  },
+  "bugs": {
+    "url": "https://github.com/digitalbazaar/bedrock-session-rest/issues"
+  },
+  "homepage": "https://github.com/digitalbazaar/bedrock-session-rest",
+  "dependencies": {
+    "async": "^1.4.2",
+    "bedrock": "^1.0.6",
+    "request": "^2.65.0"
+  }
+}
