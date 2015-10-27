@@ -11,12 +11,12 @@ var config = bedrock.config;
 var request = require('request');
 request = request.defaults({json: true, jar: true});
 
-var sessionService = config.server.baseUri + config['session-rest'].basePath;
+var sessionService = config.server.baseUri +
+  config['session-rest'].routes.session;
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 describe('session-service', function() {
-
   describe('unauthenticated', function() {
     it('should return an empty object', function(done) {
       request({
@@ -80,11 +80,7 @@ describe('session-service', function() {
 
 function login(callback) {
   request.post({
-    url: config.server.baseUri + '/login',
-    form: {
-      username: 'SomeUser',
-      password: 'SomePassword'
-    }
+    url: config.server.baseUri + '/login'
   }, callback);
 }
 

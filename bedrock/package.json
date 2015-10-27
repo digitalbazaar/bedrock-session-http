@@ -13,15 +13,7 @@
   "dependencies": {
     "bedrock": "^1.0.6",
     "bedrock-express": "^1.4.0",
-    "bedrock-identity": "^1.0.2",
-    "bedrock-mail": "^1.0.1",
-    "bedrock-mongodb": "^1.0.2",
-    "bedrock-passport": "^1.0.1",
-    "bedrock-permission": "^1.0.1",
-    "bedrock-requirejs": "^1.0.1",
-    "bedrock-server": "^1.0.2",
-    "body-parser": "^1.14.1",
-    "passport-local": "^1.0.0"
+    "bedrock-server": "^1.0.2"
   },
   "engines": {
     "node": ">=0.10.0"
