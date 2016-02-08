@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-session-rest",
   "dependencies": {
-    "async": "^1.4.2",
+    "async": "^1.4.2"
+  },
+  "devDependencies": {
     "request": "^2.65.0"
   },
   "peerDependencies": {
