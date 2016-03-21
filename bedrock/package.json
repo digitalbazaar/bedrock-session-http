@@ -1,5 +1,5 @@
 {
-  "name": "bedrock-session-rest-test",
+  "name": "bedrock-session-http-test",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/bedrock-session-rest/issues"
+    "url": "https://github.com/digitalbazaar/bedrock-session-http/issues"
   },
   "dependencies": {
     "bedrock": "^1.0.6",

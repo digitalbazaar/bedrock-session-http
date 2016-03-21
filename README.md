@@ -1,4 +1,4 @@
-# bedrock-session-rest
+# bedrock-session-http
 Provides session information via a REST API
 
 ## Requirements

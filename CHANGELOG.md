@@ -1,4 +1,4 @@
-# bedrock-session-rest ChangeLog
+# bedrock-session-http ChangeLog
 
 ## [Unreleased]
 
@@ -11,5 +11,5 @@
 
 - See git history for changes.
 
-[Unreleased]: https://github.com/digitalbazaar/bedrock-session-rest/compare/2.0.0...HEAD
-[2.0.0]: https://github.com/digitalbazaar/bedrock-session-rest/compare/1.0.0...2.0.0
+[Unreleased]: https://github.com/digitalbazaar/bedrock-session-http/compare/2.0.0...HEAD
+[2.0.0]: https://github.com/digitalbazaar/bedrock-session-http/compare/1.0.0...2.0.0

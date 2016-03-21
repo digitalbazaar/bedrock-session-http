@@ -1,5 +1,5 @@
 {
-  "name": "bedrock-session-rest",
+  "name": "bedrock-session-http",
   "version": "2.0.1-dev",
   "description": "A RESTful API for accessing session information",
   "main": "./lib/session.js",
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/digitalbazaar/bedrock-session-rest.git"
+    "url": "https://github.com/digitalbazaar/bedrock-session-http.git"
   },
   "author": {
     "name": "Digital Bazaar, Inc.",
@@ -16,11 +16,11 @@
     "url": "http://digitalbazaar.com"
   },
   "bugs": {
-    "url": "https://github.com/digitalbazaar/bedrock-session-rest/issues"
+    "url": "https://github.com/digitalbazaar/bedrock-session-http/issues"
   },
-  "homepage": "https://github.com/digitalbazaar/bedrock-session-rest",
+  "homepage": "https://github.com/digitalbazaar/bedrock-session-http",
   "dependencies": {
-    "async": "^1.4.2",
+    "async": "^1.5.2",
     "bedrock": "^1.0.6",
     "bedrock-express": "^2.0.0"
   },

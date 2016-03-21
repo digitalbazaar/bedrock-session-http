@@ -1,7 +1,7 @@
 /*
- * Copyright (c) 2015 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2015-2016 Digital Bazaar, Inc. All rights reserved.
  */
- /* global describe, it, require, should */
+ /* global describe, it, require, should, beforeEach */
  /* jshint node: true */
 
 'use strict';
@@ -12,7 +12,7 @@ var request = require('request');
 request = request.defaults({json: true, jar: true});
 
 var sessionService = config.server.baseUri +
-  config['session-rest'].routes.session;
+  config['session-http'].routes.session;
 
 process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
@@ -49,7 +49,7 @@ describe('session-service', function() {
         body.should.be.an('object');
         should.exist(body.id);
         body.id.should.be.a('string');
-        body.id.should.equal(config['session-rest'].test.user.id);
+        body.id.should.equal(config['session-http'].test.user.id);
         done();
       });
     });
