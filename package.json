@@ -1,6 +1,6 @@
 {
   "name": "bedrock-session-http",
-  "version": "2.0.2",
+  "version": "2.0.3-dev",
   "description": "A RESTful API for accessing session information",
   "main": "./lib/session.js",
   "scripts": {
