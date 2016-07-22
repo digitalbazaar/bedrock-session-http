@@ -1,5 +1,7 @@
 # bedrock-session-http ChangeLog
 
+## [3.0.1] - 2016-07-22
+
 ### Fixed
 - Ensure status code is set before sending session.
 
