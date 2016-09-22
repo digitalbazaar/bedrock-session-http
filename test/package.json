@@ -1,9 +1,11 @@
 {
-  "name": "bedrock-session-http",
-  "version": "3.0.2-0",
-  "description": "A RESTful API for accessing session information",
+  "name": "bedrock-session-http-test",
+  "version": "0.0.1-0",
+  "description": "A RESTful API for accessing session information test",
   "main": "./lib",
-  "scripts": {},
+  "scripts": {
+    "test": "node --preserve-symlinks test.js test"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/digitalbazaar/bedrock-session-http.git"
@@ -18,13 +20,11 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-session-http",
   "dependencies": {
-    "async": "^1.5.2"
-  },
-  "devDependencies": {
-    "request": "^2.65.0"
-  },
-  "peerDependencies": {
+    "async": "^1.5.2",
     "bedrock": "^1.0.6",
-    "bedrock-express": "^2.0.0"
+    "bedrock-express": "^2.0.0",
+    "bedrock-server": "^2.1.3",
+    "bedrock-test": "^1.0.0",
+    "request": "^2.65.0"
   }
 }

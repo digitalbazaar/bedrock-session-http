@@ -8,13 +8,12 @@
 var async = require('async');
 var bedrock = require('bedrock');
 var config = bedrock.config;
+var mockData = require('./mock.data');
 var request = require('request');
-request = request.defaults({json: true, jar: true});
+request = request.defaults({json: true, strictSSL: false});
 
 var sessionService = config.server.baseUri +
   config['session-http'].routes.session;
-
-process.env.NODE_TLS_REJECT_UNAUTHORIZED = 0;
 
 describe('session-service', function() {
   describe('unauthenticated', function() {
@@ -49,7 +48,7 @@ describe('session-service', function() {
         body.should.be.an('object');
         should.exist(body.id);
         body.id.should.be.a('string');
-        body.id.should.equal(config['session-http'].test.user.id);
+        body.id.should.equal(mockData.user.id);
         done();
       });
     });
