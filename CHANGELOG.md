@@ -1,5 +1,8 @@
 # bedrock-session-http ChangeLog
 
+### Added
+- Add DELETE endpoint for destroying sessions.
+
 ## 3.0.2 - 2016-09-22
 
 ### Changed

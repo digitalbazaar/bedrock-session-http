@@ -1,18 +1,19 @@
 /*
- * Copyright (c) 2015-2016 Digital Bazaar, Inc. All rights reserved.
+ * Copyright (c) 2015-2018 Digital Bazaar, Inc. All rights reserved.
  */
  /* global describe, it, require, should, beforeEach */
  /* jshint node: true */
 
 'use strict';
-var async = require('async');
-var bedrock = require('bedrock');
-var config = bedrock.config;
-var mockData = require('./mock.data');
-var request = require('request');
+const async = require('async');
+const bedrock = require('bedrock');
+const config = bedrock.config;
+const mockData = require('./mock.data');
+let request = require('request');
 request = request.defaults({json: true, strictSSL: false});
+const jar = request.jar();
 
-var sessionService = config.server.baseUri +
+const sessionService = config.server.baseUri +
   config['session-http'].routes.session;
 
 describe('session-service', function() {
@@ -20,7 +21,8 @@ describe('session-service', function() {
     it('should return an empty object', function(done) {
       request({
         url: sessionService,
-        method: 'GET'
+        method: 'GET',
+        jar
       }, function(err, res, body) {
         should.not.exist(err);
         res.statusCode.should.equal(200);
@@ -40,15 +42,17 @@ describe('session-service', function() {
     it('should provide information about the current session', function(done) {
       request({
         url: sessionService,
-        method: 'GET'
+        method: 'GET',
+        jar
       }, function(err, res, body) {
         should.not.exist(err);
         res.statusCode.should.equal(200);
         should.exist(body);
         body.should.be.an('object');
-        should.exist(body.id);
-        body.id.should.be.a('string');
-        body.id.should.equal(mockData.user.id);
+        should.exist(body.user);
+        body.user.should.be.an('object');
+        body.user.id.should.be.a('string');
+        body.user.id.should.equal(mockData.user.id);
         done();
       });
     });
@@ -61,7 +65,8 @@ describe('session-service', function() {
         function(callback) {
           request({
             url: sessionService,
-            method: 'GET'
+            method: 'GET',
+            jar
           }, function(err, res, body) {
             should.not.exist(err);
             res.statusCode.should.equal(200);
@@ -79,13 +84,15 @@ describe('session-service', function() {
 
 function login(callback) {
   request.post({
-    url: config.server.baseUri + '/login'
+    url: config.server.baseUri + '/login',
+    jar
   }, callback);
 }
 
 function logout(callback) {
   request({
-    url: config.server.baseUri + '/logout',
-    method: 'GET'
+    url: sessionService,
+    method: 'DELETE',
+    jar
   }, callback);
 }
