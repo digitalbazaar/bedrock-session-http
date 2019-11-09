@@ -1,5 +1,7 @@
 # bedrock-session-http ChangeLog
 
+## 3.2.0 - 2019-11-08
+
 ### Changed
 - Update to latest bedrock events API.
 
