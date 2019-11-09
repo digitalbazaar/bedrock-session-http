@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-session-http",
   "peerDependencies": {
-    "bedrock": "^1.0.6",
-    "bedrock-express": "^2.1.0"
+    "bedrock": "1.0.6 - 3.x",
+    "bedrock-express": "2.1.0 - 3.x"
   }
 }
