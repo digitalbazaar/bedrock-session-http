@@ -1,5 +1,10 @@
 # bedrock-session-http ChangeLog
 
+## 3.2.1 - 2020-01-05
+
+### Removed
+- Remove deprecated GET-based logout security vulnerability.
+
 ## 3.2.0 - 2019-11-08
 
 ### Changed
