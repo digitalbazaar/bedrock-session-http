@@ -4,7 +4,7 @@
 
 'use strict';
 
-var mock = {};
+const mock = {};
 module.exports = mock;
 
 mock.user = {

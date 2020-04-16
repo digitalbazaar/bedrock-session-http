@@ -1,10 +1,8 @@
 /*
  * Copyright (c) 2015-2018 Digital Bazaar, Inc. All rights reserved.
  */
- /* global describe, it, require, should, beforeEach */
- /* jshint node: true */
-
 'use strict';
+
 const async = require('async');
 const bedrock = require('bedrock');
 const config = bedrock.config;
