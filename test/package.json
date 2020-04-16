@@ -1,31 +1,31 @@
 {
   "name": "bedrock-session-http-test",
   "version": "0.0.1-0",
-  "description": "A RESTful API for accessing session information test",
-  "main": "./lib",
+  "private": true,
   "scripts": {
-    "test": "node --preserve-symlinks test.js test"
+    "test": "node --preserve-symlinks test.js test",
+    "coverage": "cross-env NODE_ENV=test nyc --reporter=lcov --reporter=text-summary npm test",
+    "coverage-ci": "cross-env NODE_ENV=test nyc --reporter=text-lcov npm test > coverage.lcov",
+    "coverage-report": "nyc report"
   },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/digitalbazaar/bedrock-session-http.git"
-  },
-  "author": {
-    "name": "Digital Bazaar, Inc.",
-    "email": "support@digitalbazaar.com",
-    "url": "https://digitalbazaar.com/"
-  },
-  "bugs": {
-    "url": "https://github.com/digitalbazaar/bedrock-session-http/issues"
-  },
-  "homepage": "https://github.com/digitalbazaar/bedrock-session-http",
   "dependencies": {
     "async": "^3.1.0",
     "bedrock": "^3.0.0",
     "bedrock-express": "^3.0.0",
-    "bedrock-server": "^2.4.0",
+    "bedrock-server": "^2.6.0",
     "bedrock-session-http": "file:..",
-    "bedrock-test": "^4.0.2",
+    "bedrock-test": "^5.0.0",
+    "cross-env": "^7.0.2",
+    "nyc": "^15.0.1",
     "request": "^2.88.0"
+  },
+  "nyc": {
+    "excludeNodeModules": false,
+    "include": [
+      "node_modules/bedrock-session-http/**"
+    ],
+    "exclude": [
+      "node_modules/bedrock-session-http/node_modules/**"
+    ]
   }
 }

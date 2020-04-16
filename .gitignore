@@ -1,11 +1,11 @@
+*.lcov
 *.log
-*.py[co]
 *.sw[nop]
 *~
-.cache
 .nyc_output
 .project
 .settings
+.vscode
 TAGS
 coverage
 node_modules
