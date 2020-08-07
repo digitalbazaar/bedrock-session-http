@@ -1,5 +1,11 @@
 # bedrock-session-http ChangeLog
 
+## 3.3.0 -
+
+## Added
+- Add the ttl from bedrock.config.express.session to session data.
+- Add Usage section to the README to document new ttl feature.
+
 ## 3.2.1 - 2020-01-05
 
 ### Removed
