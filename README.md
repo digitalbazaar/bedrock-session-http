@@ -8,7 +8,6 @@ Provides session information via a REST API
 
 - npm v3+
 
-
 ## Usage
   - GET on `routes.session` will refresh a session & return session data.
   - DELETE on `routes.session` will delete a session. 
