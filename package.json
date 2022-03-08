@@ -20,11 +20,11 @@
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-session-http",
   "peerDependencies": {
-    "bedrock": "1.0.6 - 3.x",
-    "bedrock-express": "2.1.0 - 3.x"
+    "bedrock": "^4.4.3",
+    "bedrock-express": "^6.3.0"
   },
   "devDependencies": {
-    "eslint": "^7.21.0",
-    "eslint-config-digitalbazaar": "^2.3.0"
+    "eslint": "^7.32.0",
+    "eslint-config-digitalbazaar": "^2.8.0"
   }
 }

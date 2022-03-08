@@ -1,5 +1,5 @@
-/*
- * Copyright (c) 2015-2018 Digital Bazaar, Inc. All rights reserved.
+/*!
+ * Copyright (c) 2015-2022 Digital Bazaar, Inc. All rights reserved.
  */
 const bedrock = require('bedrock');
 const mockData = require('./mocha/mock.data');

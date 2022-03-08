@@ -1,5 +1,11 @@
 # bedrock-session-http ChangeLog
 
+## 3.3.0 - 2022-03-xx
+
+### Changed
+- Update peer dependencies.
+- Update test suite to use more modern libraries.
+
 ## 3.2.1 - 2020-01-05
 
 ### Removed

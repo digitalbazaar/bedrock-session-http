@@ -1,7 +1,6 @@
-/*
- * Copyright (c) 2015-2016 Digital Bazaar, Inc. All rights reserved.
+/*!
+ * Copyright (c) 2015-2022 Digital Bazaar, Inc. All rights reserved.
  */
-
 'use strict';
 
 const mock = {};

@@ -1,9 +1,8 @@
-/*
- * Copyright (c) 2015-2018 Digital Bazaar, Inc. All rights reserved.
+/*!
+ * Copyright (c) 2015-2012 Digital Bazaar, Inc. All rights reserved.
  */
 'use strict';
 
-const async = require('async');
 const bedrock = require('bedrock');
 const config = bedrock.config;
 const mockData = require('./mock.data');
@@ -33,8 +32,8 @@ describe('session-service', function() {
   });
 
   describe('authenticated', function() {
-    beforeEach(function(done) {
-      login(done);
+    beforeEach(async function() {
+      await login();
     });
 
     it('should provide information about the current session', function(done) {
@@ -55,42 +54,45 @@ describe('session-service', function() {
       });
     });
 
-    it('should return an empty object after logout', function(done) {
-      async.series([
-        function(callback) {
-          logout(callback);
-        },
-        function(callback) {
-          request({
-            url: sessionService,
-            method: 'GET',
-            jar
-          }, function(err, res, body) {
-            should.not.exist(err);
-            res.statusCode.should.equal(200);
-            should.exist(body);
-            body.should.be.an('object');
-            Object.keys(body).length.should.equal(0);
-            callback();
-          });
-        }
-      ], done);
+    it('should return an empty object after logout', async function() {
+      await logout();
+      let body;
+      const res = await (new Promise((resolve, reject) => {
+        request({
+          url: sessionService,
+          method: 'GET',
+          jar
+        }, function(err, res, _body) {
+          if(err) {
+            return reject(err);
+          }
+          body = _body;
+          resolve(res);
+        });
+      }));
+      res.statusCode.should.equal(200);
+      should.exist(body);
+      body.should.be.an('object');
+      Object.keys(body).length.should.equal(0);
     });
   });
-
 });
 
-function login(callback) {
-  request.post({
-    url: config.server.baseUri + '/login',
-    jar
-  }, callback);
+async function login() {
+  return new Promise((resolve, reject) => {
+    request.post({
+      url: config.server.baseUri + '/login',
+      jar
+    }, (err, response) => err ? reject(err) : resolve(response));
+  });
 }
 
-function logout(callback) {
-  request({
-    url: sessionService,
-    method: 'DELETE',
-    jar
-  }, callback);
+async function logout() {
+  return new Promise((resolve, reject) => {
+    request({
+      url: sessionService,
+      method: 'DELETE',
+      jar
+    }, (err, response) => err ? reject(err) : resolve(response));
+  });
 }
