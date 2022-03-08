@@ -1,6 +1,6 @@
 # bedrock-session-http ChangeLog
 
-## 3.3.0 - 2022-03-xx
+## 3.3.0 - 2022-03-08
 
 ### Changed
 - Update peer dependencies.
