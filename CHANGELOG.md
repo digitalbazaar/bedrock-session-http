@@ -1,6 +1,6 @@
 # bedrock-session-http ChangeLog
 
-## 3.4.0 - 2022-03-xx
+## 3.4.0 - 2022-03-27
 
 ### Changed
 - Update peer deps:
