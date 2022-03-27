@@ -1,5 +1,14 @@
 # bedrock-session-http ChangeLog
 
+## 3.4.0 - 2022-03-xx
+
+### Changed
+- Update peer deps:
+  - `bedrock@4.5`
+  - `bedrock-express@6.4`.
+- Use `esm.js` to transpile internals from ESM to CommonJS. Should be
+  a non-breaking change.
+
 ## 3.3.0 - 2022-03-08
 
 ### Changed
