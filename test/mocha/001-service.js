@@ -1,13 +1,10 @@
 /*!
  * Copyright (c) 2015-2012 Digital Bazaar, Inc. All rights reserved.
  */
-'use strict';
-
-const bedrock = require('bedrock');
-const config = bedrock.config;
-const mockData = require('./mock.data');
-let request = require('request');
-request = request.defaults({json: true, strictSSL: false});
+import {config} from '@bedrock/core';
+import {mock} from './mock.data.js';
+import requestModule from 'request';
+const request = requestModule.defaults({json: true, strictSSL: false});
 const jar = request.jar();
 
 const sessionService = config.server.baseUri +
@@ -49,7 +46,7 @@ describe('session-service', function() {
         should.exist(body.user);
         body.user.should.be.an('object');
         body.user.id.should.be.a('string');
-        body.user.id.should.equal(mockData.user.id);
+        body.user.id.should.equal(mock.user.id);
         done();
       });
     });

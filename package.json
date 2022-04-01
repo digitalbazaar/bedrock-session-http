@@ -1,8 +1,9 @@
 {
-  "name": "bedrock-session-http",
+  "name": "@bedrock/session-http",
   "version": "3.4.1-0",
+  "type": "module",
   "description": "A RESTful API for accessing session information",
-  "main": "./lib",
+  "main": "./lib/index.js",
   "scripts": {
     "lint": "eslint ."
   },
@@ -19,12 +20,10 @@
     "url": "https://github.com/digitalbazaar/bedrock-session-http/issues"
   },
   "homepage": "https://github.com/digitalbazaar/bedrock-session-http",
-  "dependencies": {
-    "esm": "^3.2.25"
-  },
+  "dependencies": {},
   "peerDependencies": {
-    "bedrock": "^4.5.0",
-    "bedrock-express": "^6.4.1"
+    "@bedrock/core": "^5.0.0",
+    "@bedrock/express": "^7.0.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",

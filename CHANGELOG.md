@@ -1,5 +1,16 @@
 # bedrock-session-http ChangeLog
 
+## 4.0.0 - 2022-04-xx
+
+### Changed
+- **BREAKING**: Rename package to `@bedrock/session-http`.
+- **BREAKING**: Convert to module (ESM).
+- **BREAKING**: Remove default export.
+- **BREAKING**: Require node 14.x.
+
+### Removed
+- **BREAKING**: Remove unused route config for `logout` route.
+
 ## 3.4.0 - 2022-03-27
 
 ### Changed
