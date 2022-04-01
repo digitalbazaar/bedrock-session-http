@@ -1,11 +1,13 @@
 /*!
  * Copyright (c) 2015-2022 Digital Bazaar, Inc. All rights reserved.
  */
-const {config} = require('bedrock');
-const path = require('path');
-require('bedrock-express');
+import {config} from '@bedrock/core';
+import {fileURLToPath} from 'url';
+import path from 'path';
+import '@bedrock/express';
 
-// tests
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
 config.mocha.tests.push(path.join(__dirname, 'mocha'));
 
 config.express.useSession = true;
