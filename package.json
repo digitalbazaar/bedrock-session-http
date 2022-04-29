@@ -22,8 +22,8 @@
   "homepage": "https://github.com/digitalbazaar/bedrock-session-http",
   "dependencies": {},
   "peerDependencies": {
-    "@bedrock/core": "^5.0.0",
-    "@bedrock/express": "^7.0.0"
+    "@bedrock/core": "^6.0.0",
+    "@bedrock/express": "^8.0.0"
   },
   "devDependencies": {
     "eslint": "^7.32.0",
