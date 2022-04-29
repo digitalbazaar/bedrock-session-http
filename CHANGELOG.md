@@ -1,5 +1,12 @@
 # bedrock-session-http ChangeLog
 
+## 5.0.0 - 2022-04-xx
+
+### Changed
+- **BREAKING**: Update peer deps:
+  - `@bedrock/core@6`
+  - `@bedrock/express@8`.
+
 ## 4.0.1 - 2022-04-01
 
 ### Fixed
